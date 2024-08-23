@@ -1,7 +1,9 @@
 // This is a sample Jenkins File
 
 pipeline{
-    agent any
+    agent {
+        lable 'java-node-agent'
+    }
     stages {
         stage ('First Stage'){
             steps {
