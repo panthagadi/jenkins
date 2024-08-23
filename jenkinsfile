@@ -1,7 +1,7 @@
 // This is a sample Jenkins File
 
 pipeline{
-    gent any
+    agent any
     stages {
         stage ('First Stage'){
             steps {
