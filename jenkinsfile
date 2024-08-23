@@ -2,7 +2,7 @@
 
 pipeline{
     agent {
-        lable 'java-node-agent'
+        label 'java-node-agent'
     }
     stages {
         stage ('First Stage'){
