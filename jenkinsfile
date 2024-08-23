@@ -1,0 +1,19 @@
+// This is a sample Jenkins File
+
+pipeline{
+    gent any
+    stages {
+        stage (First Stage){
+            steps {
+            echo 'Hello From Jenkins'
+        }
+        }
+        stage ('Second stage'){
+            steps {
+                echo 'Bye from jenkins'
+            }
+        }
+        
+        
+    }
+}
