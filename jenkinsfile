@@ -1,30 +1,24 @@
-/// This is my second jenkins file for script stage 
-
+/// This is my second jenkins file for script stage
 pipeline {
-    agent {
-        label 'java-node-agent'
+    agent any
+    stages {
+        stage ('Build stage')
+        steps {
+            echo '**This is to print maven***'
         }
-     stages {
-               stage ('Build stage'){
-                steps {
-             echo '** This is the stage for building Maven app **'
+        stage ('scripted stage'
+        steps {
+            echo 'This is tp write scipt'
+            script {
+                def course = "k8's"
+                if (course == k8's'){
+                    println ("Thank for enrolling course")
                 }
-               }
-                stage ('Scripted stage')
-                   steps {
-                             echo '****** Excusting script stage ******'
-                       // Write some custome groovy code
-                               script {
-                                            def course = "k8's"
-                                            if (course == "k8's") {
-                                            printlin ("Thanks for enrolling into $course")
-                   }
-                                               else
-                                              println ("Do learn k8's")
+                else {
+                    println ("Do learn k8's")
+                }
 
+            }
+        })
     }
-}        
-
 }
-
-      }
