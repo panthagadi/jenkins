@@ -12,14 +12,16 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        stage ('specific stage'){
-        tools {
-            jdk 'jdk-17'
+        stage ('specific stage') {
+            tools {
+                jdk 'JDK-17'
+           
             steps {
                 echo "This is to specfie jdk version"
                 sh 'java --version'
+                }
+        
             }
-          }
         }
     }
 }
