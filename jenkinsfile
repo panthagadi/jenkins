@@ -1,9 +1,10 @@
 /// This is my second jenkins file for script stage 
 
 pipeline {
-    agent
-     label 'java-node-slave'
-      stages {
+    agent {
+        label 'java-node-agent'
+        }
+     stages {
                stage ('Build stage'){
                 steps {
              echo '** This is the stage for building Maven app **'
@@ -27,3 +28,4 @@ pipeline {
 }
 
       }
+
