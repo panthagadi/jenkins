@@ -3,13 +3,21 @@
 pipeline {
     agent any
     tools {
-        maven 'MAVEN_PATH'
+        Maven 'MAVEN_PATH'
     }
     stages {
-        stage ('Maven stage'){
+        stage {
             steps {
                 echo "This is to view maven version"
                 sh 'mvn --version'
+            }
+        }
+        stage ('specific stage')
+        tools {
+            jdk 'jdk-17'
+            steps {
+                echo "This is to specfie jdk version"
+                sh 'java --version'
             }
         }
     }
