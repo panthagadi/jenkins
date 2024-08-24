@@ -6,7 +6,7 @@ pipeline {
         steps {
             echo '**This is to print maven***'
         }
-        stage ('scripted stage'
+        stage ('scripted stage')
         steps {
             echo 'This is tp write scipt'
             script {
@@ -19,6 +19,7 @@ pipeline {
                 }
 
             }
-        })
+        }
     }
 }
+
