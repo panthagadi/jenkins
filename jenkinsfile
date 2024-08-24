@@ -3,10 +3,10 @@
 pipeline {
     agent any
     tools {
-        Maven 'MAVEN_PATH'
+        maven 'MAVEN_PATH'
     }
     stages {
-        stage {
+        stage ('Maven stage'){
             steps {
                 echo "This is to view maven version"
                 sh 'mvn --version'
