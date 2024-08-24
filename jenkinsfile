@@ -1,21 +1,34 @@
-// This is a sample Jenkins File
+/// This is my second jenkins file for script stage 
 
-pipeline{
-    agent {
-        label 'java-node-agent'
+
+
+pipeline {
+    agent
+     label 'java-node-slave'
+      stages {
+               stage (Build stage){
+                steps {
+             echo '** This is the stage for building Maven app **'
+                }
+               }
+stage (Scripted stage)
+steps {
+    echo '****** Excusting script stage ******'
+    // Write some custome groovy code
+    script {
+        def course = "k8's"
+        if course == "k8's" {
+        printlin ("Thanks for enrolling into $course")
+        }
+        else
+        println ("Do learn k8's")
+
     }
-    stages {
-        stage ('First Stage'){
-            steps {
-            echo 'Hello From Jenkins'
-        }
-        }
-        stage ('Second stage'){
-            steps {
-                echo 'Bye from jenkins'
-            }
-        }
-        
-        
-    }
+}        
+
+}
+
+      }
+
+
 }
