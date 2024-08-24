@@ -1,25 +1,15 @@
-/// This is my second jenkins file for script stage
+// This is to build maven and identify it's version
+
 pipeline {
     agent any
+    tools {
+        Maven 'MAVEN_PATH'
+    }
     stages {
-        stage ('Build stage') {
+        stage {
             steps {
-            echo '**This is to print maven***'}
-        
-        }
-        stage ('scripted stage') {
-            steps {
-            echo 'This is tp write scipt'
-            script {
-                def course = "k8's"
-                if (course == "k8's"){
-                    println ("Thank for enrolling course")
-                }
-                else {
-                    println ("Do learn k8's")}
-        
-                }
-
+                echo "This is to view maven version"
+                sh 'mvn --version'
             }
         }
     }
