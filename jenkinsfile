@@ -17,7 +17,7 @@ steps {
     // Write some custome groovy code
     script {
         def course = "k8's"
-        if course == "k8's" {
+        if (course == "k8's") {
         printlin ("Thanks for enrolling into $course")
         }
         else
