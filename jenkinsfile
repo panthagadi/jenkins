@@ -10,17 +10,17 @@ pipeline {
              echo '** This is the stage for building Maven app **'
                 }
                }
-               stage ('Scripted stage')
-                steps {
-             echo '****** Excusting script stage ******'
+                stage ('Scripted stage')
+                   steps {
+                             echo '****** Excusting script stage ******'
                        // Write some custome groovy code
-                 script {
-                 def course = "k8's"
-                 if (course == "k8's") {
-                   printlin ("Thanks for enrolling into $course")
+                               script {
+                                            def course = "k8's"
+                                            if (course == "k8's") {
+                                            printlin ("Thanks for enrolling into $course")
                    }
-                     else
-                      println ("Do learn k8's")
+                                               else
+                                              println ("Do learn k8's")
 
     }
 }        
@@ -28,4 +28,3 @@ pipeline {
 }
 
       }
-
