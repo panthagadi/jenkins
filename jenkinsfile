@@ -12,7 +12,7 @@ pipeline {
             echo 'This is tp write scipt'
             script {
                 def course = "k8's"
-                if ('course == k8's'){
+                if (course == "k8's"){
                     println ("Thank for enrolling course")
                 }
                 else {
