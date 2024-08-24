@@ -2,24 +2,25 @@
 pipeline {
     agent any
     stages {
-        stage ('Build stage')
-        steps {
-            echo '**This is to print maven***'
+        stage ('Build stage') {
+            steps {
+            echo '**This is to print maven***'}
+        
         }
-        stage ('scripted stage')
-        steps {
+        stage ('scripted stage') {
+            steps {
             echo 'This is tp write scipt'
             script {
                 def course = "k8's"
-                if (course == "k8's"){
+                if ('course == k8's'){
                     println ("Thank for enrolling course")
                 }
                 else {
-                    println ("Do learn k8's")
+                    println ("Do learn k8's")}
+        
                 }
 
             }
         }
     }
 }
-
